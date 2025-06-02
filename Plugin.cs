@@ -15,7 +15,7 @@ using static Obeliskial_Essentials.CardDescriptionNew;
 // Make sure all your files have the same namespace and this namespace matches the RootNamespace in the .csproj file
 // All files that are in the same namespace are compiled together and can "see" each other more easily.
 
-namespace StormJavelin
+namespace Montimus
 {
     // These are used to create the actual plugin. If you don't need Obeliskial Essentials for your mod, 
     // delete the BepInDependency and the associated code "RegisterMod()" below.
@@ -64,14 +64,14 @@ namespace StormJavelin
             Log.LogInfo($"{PluginInfo.PLUGIN_GUID} {PluginInfo.PLUGIN_VERSION} has loaded!");
 
             // Sets the title, default values, and descriptions
-            EnableMod = Config.Bind(new ConfigDefinition("StormJavelin", "EnableMod"), true, new ConfigDescription("Enables the mod. If false, the mod will not work then next time you load the game."));
-            EnableDebugging = Config.Bind(new ConfigDefinition("StormJavelin", "EnableDebugging"), true, new ConfigDescription("Enables the debugging"));
-            EnableRandomJavelins = Config.Bind(new ConfigDefinition("StormJavelin", "Random Javelins"), true, new ConfigDescription("Storm Javelin is now a card reward for all."));
-            EnableBonusJavelins = Config.Bind(new ConfigDefinition("StormJavelin", "Bonus Javelins"), true, new ConfigDescription("Chace to shuffle Javelins into your deck each turn."));
-            ChangeAllNames = Config.Bind(new ConfigDefinition("StormJavelin", "ChangeAllNames"), false, new ConfigDescription("Makes it so that all cards are named Storm Javelin. Restart the game upon changing this."));
+            EnableMod = Config.Bind(new ConfigDefinition("Montimus", "EnableMod"), true, new ConfigDescription("Enables the mod. If false, the mod will not work then next time you load the game."));
+            EnableDebugging = Config.Bind(new ConfigDefinition("Montimus", "EnableDebugging"), true, new ConfigDescription("Enables the debugging"));
+            EnableRandomJavelins = Config.Bind(new ConfigDefinition("Montimus", "Random Javelins"), true, new ConfigDescription("Storm Javelin is now a card reward for all."));
+            EnableBonusJavelins = Config.Bind(new ConfigDefinition("Montimus", "Bonus Javelins"), true, new ConfigDescription("Chace to shuffle Javelins into your deck each turn."));
+            ChangeAllNames = Config.Bind(new ConfigDefinition("Montimus", "ChangeAllNames"), false, new ConfigDescription("Makes it so that all cards are named Storm Javelin. Restart the game upon changing this."));
 
 
-            // DevMode = Config.Bind(new ConfigDefinition("StormJavelin", "DevMode"), false, new ConfigDescription("Enables all of the things for testing."));
+            // DevMode = Config.Bind(new ConfigDefinition("Montimus", "DevMode"), false, new ConfigDescription("Enables all of the things for testing."));
 
 
             // Register with Obeliskial Essentials, delete this if you don't need it.
@@ -81,8 +81,8 @@ namespace StormJavelin
                 _description: "Storm Javelin",
                 _version: PluginInfo.PLUGIN_VERSION,
                 _date: ModDate,
-                _link: @"https://github.com/binbinmods/StormJavelin",
-                _contentFolder: "StormJavelin"
+                _link: @"https://github.com/binbinmods/Montimus",
+                _contentFolder: "Montimus"
             );
 
             // ring of sparks - DONE

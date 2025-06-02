@@ -33,7 +33,7 @@ def zip_mods():
 
 
 if __name__ == "__main__":  
-    mod_dir = "StormJavelin"
+    mod_dir = "Montimus"
     # config_dir = f"{mod_dir}Configs"    
     content_destination_dir = mod_dir
     

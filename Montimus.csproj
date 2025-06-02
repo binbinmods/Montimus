@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <AssemblyName>com.binbin.StormJavelin</AssemblyName>
-    <Product>StormJavelin</Product>
+    <AssemblyName>com.binbin.Montimus</AssemblyName>
+    <Product>Montimus</Product>
     <Version>0.1.1</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <LangVersion>latest</LangVersion>
@@ -12,7 +12,7 @@
       https://nuget.bepinex.dev/v3/index.json;
       https://nuget.samboy.dev/v3/index.json
     </RestoreAdditionalProjectSources>
-    <RootNamespace>StormJavelin</RootNamespace>
+    <RootNamespace>Montimus</RootNamespace>
   </PropertyGroup>
   
   <ItemGroup>
@@ -54,7 +54,7 @@
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
     <Copy SourceFiles="$(TargetPath)" DestinationFolder="../../../plugins" />
-    <Copy SourceFiles="$(TargetPath)" DestinationFolder="StormJavelin/BepInEx/plugins" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="Montimus/BepInEx/plugins" />
     <Exec Command="/usr/bin/python3 &quot;$(ProjectDir)ship_mod.py&quot;" />
 
   </Target>

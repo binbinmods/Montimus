@@ -7,10 +7,10 @@ using System.Linq;
 using System.IO;
 using static UnityEngine.Mathf;
 using UnityEngine.TextCore.LowLevel;
-using static StormJavelin.Plugin;
+using static Montimus.Plugin;
 using System.Collections.ObjectModel;
 
-namespace StormJavelin
+namespace Montimus
 {
     public class CustomFunctions
     {
