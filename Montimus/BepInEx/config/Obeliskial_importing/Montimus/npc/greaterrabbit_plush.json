@@ -1,8 +1,10 @@
 {
     "AICards": [
-        "{\n    \"AddCardRound\": 0,\n    \"AuraCurseCastIf\": \"\",\n    \"Card\": \"witherb\",\n    \"OnlyCastIf\": \"Always\",\n    \"PercentToCast\": 0.0,\n    \"Priority\": 0,\n    \"TargetCast\": \"Random\",\n    \"UnitsInDeck\": 1,\n    \"ValueCastIf\": 0.0\n}",
-        "{\n    \"AddCardRound\": 0,\n    \"AuraCurseCastIf\": \"\",\n    \"Card\": \"profanemb\",\n    \"OnlyCastIf\": \"Always\",\n    \"PercentToCast\": 0.0,\n    \"Priority\": 1,\n    \"TargetCast\": \"Random\",\n    \"UnitsInDeck\": 1,\n    \"ValueCastIf\": 0.0\n}",
-        "{\n    \"AddCardRound\": 0,\n    \"AuraCurseCastIf\": \"\",\n    \"Card\": \"consumeb\",\n    \"OnlyCastIf\": \"Always\",\n    \"PercentToCast\": 0.0,\n    \"Priority\": 2,\n    \"TargetCast\": \"Random\",\n    \"UnitsInDeck\": 1,\n    \"ValueCastIf\": 0.0\n}"
+        "{\n    \"AddCardRound\": 0,\n    \"AuraCurseCastIf\": \"\",\n    \"Card\": \"montgreatermultiplication\",\n    \"OnlyCastIf\": \"Always\",\n    \"PercentToCast\": 0.0,\n    \"Priority\": 20,\n    \"TargetCast\": \"Random\",\n    \"UnitsInDeck\": 1,\n    \"ValueCastIf\": 0.0\n}",
+        "{\n    \"AddCardRound\": 0,\n    \"AuraCurseCastIf\": \"\",\n    \"Card\": \"montviciouscrunchb\",\n    \"OnlyCastIf\": \"Always\",\n    \"PercentToCast\": 0.0,\n    \"Priority\": 10,\n    \"TargetCast\": \"Random\",\n    \"UnitsInDeck\": 1,\n    \"ValueCastIf\": 0.0\n}",
+        "{\n    \"AddCardRound\": 0,\n    \"AuraCurseCastIf\": \"\",\n    \"Card\": \"monthoneclawsb\",\n    \"OnlyCastIf\": \"Always\",\n    \"PercentToCast\": 0.0,\n    \"Priority\": 0,\n    \"TargetCast\": \"Random\",\n    \"UnitsInDeck\": 1,\n    \"ValueCastIf\": 0.0\n}",
+        "{\n    \"AddCardRound\": 0,\n    \"AuraCurseCastIf\": \"\",\n    \"Card\": \"montcautioushoppingb\",\n    \"OnlyCastIf\": \"Always\",\n    \"PercentToCast\": 0.0,\n    \"Priority\": 1,\n    \"TargetCast\": \"Random\",\n    \"UnitsInDeck\": 1,\n    \"ValueCastIf\": 0.0\n}",
+        "{\n    \"AddCardRound\": 0,\n    \"AuraCurseCastIf\": \"\",\n    \"Card\": \"montboldhoppingb\",\n    \"OnlyCastIf\": \"Always\",\n    \"PercentToCast\": 0.0,\n    \"Priority\": 2,\n    \"TargetCast\": \"Random\",\n    \"UnitsInDeck\": 1,\n    \"ValueCastIf\": 0.0\n}"
     ],
     "AuraCurseImmune": [
         "shackle"

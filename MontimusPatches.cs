@@ -46,6 +46,45 @@ namespace Montimus
             }
         }
 
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(AtOManager), "GlobalAuraCurseModificationByTraitsAndItems")]
+        public static void GlobalAuraCurseModificationByTraitsAndItemsPostfix(ref AtOManager __instance, ref AuraCurseData __result, string _type, string _acId, Character _characterCaster, Character _characterTarget)
+        {
+            LogInfo($"GACM MoreMadness");
+            Character characterOfInterest = _type == "set" ? _characterTarget : _characterCaster;
+            // bool gainsPerksNPC = IsLivingNPC(characterOfInterest) && difficultyLevelInt >= (int)DifficultyLevelEnum.Hard && HasCorruptor(Corruptors.Decadence);
+            // bool gainsPerksHero = IsLivingHero(characterOfInterest) && difficultyLevelInt >= (int)DifficultyLevelEnum.Hard && HasCorruptor(Corruptors.Decadence);
+            string enchantId;
+            if (!IsLivingNPC(characterOfInterest))
+            {
+                return;
+            }
+            switch (_acId)
+            {
+                case "evasion":
+                    enchantId = "montproliferate";
+                    if (IfCharacterHas(characterOfInterest, CharacterHas.Enchantment, enchantId, AppliesTo.ThisHero))
+                    {
+                        __result.GainCharges = true;
+                    }
+                    break;
+                case "fast":
+                    enchantId = "montproliferate";
+                    if (IfCharacterHas(characterOfInterest, CharacterHas.Enchantment, enchantId, AppliesTo.ThisHero))
+                    {
+                        __result.GainCharges = true;
+                    }
+                    break;
+                case "buffer":
+                    enchantId = "montproliferate";
+                    if (IfCharacterHas(characterOfInterest, CharacterHas.Enchantment, enchantId, AppliesTo.ThisHero))
+                    {
+                        __result.GainCharges = true;
+                    }
+                    break;
+            }
+        }
+
 
     }
 }

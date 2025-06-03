@@ -85,52 +85,12 @@ namespace Montimus
                 _contentFolder: "Montimus"
             );
 
-            // ring of sparks - DONE
-            // sacred sparks - done
-            // rods from god - done
-            // thunder shield - TBD
-            // crackling gauntlet 
-            // electric armor
-            // storm necklace
 
 
-            string text = $"{medsSpriteText("sharp")} on heroes increases {medsSpriteText("lightning")} damage by 2% per charge";
-            string cardId = "javringofsparks";
-            AddTextToCardDescription(text, TextLocation.End, cardId, includeRare: false);
+            string text = $"{medsSpriteText("fast")}{medsSpriteText("evasion")}{medsSpriteText("buffer")} stack on this character.";
+            string cardId = "montproliferate";
+            AddTextToCardDescription(text, TextLocation.ItemBeginning, cardId, includeAB: true);
 
-            text = $"{medsSpriteText("sharp")} on heroes increases {medsSpriteText("lightning")} damage by 4% per charge";
-            cardId = "javringofsparksrare";
-            AddTextToCardDescription(text, TextLocation.End, cardId, includeRare: false);
-
-            text = $"{medsSpriteText("spark")} on monsters heals heroes by 1 when attacked";
-            cardId = "javsacredsparks";
-            AddTextToCardDescription(text, TextLocation.End, cardId, includeRare: true);
-
-            text = $"{medsSpriteText("spark")} on monsters reduces {medsSpriteText("piercing")} resistance by 0.5% per charge";
-            cardId = "javrodsfromgod";
-            AddTextToCardDescription(text, TextLocation.End, cardId, includeRare: false);
-
-            text = $"{medsSpriteText("spark")} on monsters reduces {medsSpriteText("piercing")} resistance by 1% per charge";
-            cardId = "javrodsfromgodrare";
-            AddTextToCardDescription(text, TextLocation.End, cardId, includeRare: false);
-
-            text = $"+5% All Damage and Healing Done for each Storm Javelin in your Draw Pile";
-            cardId = "javthundershield";
-            AddTextToCardDescription(text, TextLocation.ItemBeginning, cardId, includeRare: false);
-
-            text = $"+10% All Damage and Healing Done for each Storm Javelin in your Draw Pile";
-            cardId = "javthundershieldrare";
-            AddTextToCardDescription(text, TextLocation.End, cardId, includeRare: false);
-
-
-            text = $"{medsSpriteText("powerful")} on heroes have -15 Max. charges and +1 Max. charge for each card in their Draw Pile";
-            cardId = "javcracklinggauntlet";
-            AddTextToCardDescription(text, TextLocation.End, cardId, includeRare: false);
-
-
-            text = $"{medsSpriteText("powerful")} on heroes have -10 Max. charges and +1 Max. charge for each card in their Draw Pile";
-            cardId = "javcracklinggauntletrare";
-            AddTextToCardDescription(text, TextLocation.End, cardId, includeRare: false);
             // apply patches, this functionally runs all the code for Harmony, running your mod
             if (EnableMod.Value) { harmony.PatchAll(); }
         }

@@ -1,8 +1,10 @@
 {
     "AICards": [
-        "{\n    \"AddCardRound\": 0,\n    \"AuraCurseCastIf\": \"\",\n    \"Card\": \"wither\",\n    \"OnlyCastIf\": \"Always\",\n    \"PercentToCast\": 0.0,\n    \"Priority\": 0,\n    \"TargetCast\": \"Random\",\n    \"UnitsInDeck\": 1,\n    \"ValueCastIf\": 0.0\n}",
-        "{\n    \"AddCardRound\": 0,\n    \"AuraCurseCastIf\": \"\",\n    \"Card\": \"profanem\",\n    \"OnlyCastIf\": \"Always\",\n    \"PercentToCast\": 0.0,\n    \"Priority\": 1,\n    \"TargetCast\": \"Random\",\n    \"UnitsInDeck\": 1,\n    \"ValueCastIf\": 0.0\n}",
-        "{\n    \"AddCardRound\": 0,\n    \"AuraCurseCastIf\": \"\",\n    \"Card\": \"consume\",\n    \"OnlyCastIf\": \"Always\",\n    \"PercentToCast\": 0.0,\n    \"Priority\": 2,\n    \"TargetCast\": \"Random\",\n    \"UnitsInDeck\": 1,\n    \"ValueCastIf\": 0.0\n}"
+        "{\n    \"AddCardRound\": 0,\n    \"AuraCurseCastIf\": \"\",\n    \"Card\": \"montgreatermultiplication\",\n    \"OnlyCastIf\": \"Always\",\n    \"PercentToCast\": 0.0,\n    \"Priority\": 20,\n    \"TargetCast\": \"Random\",\n    \"UnitsInDeck\": 1,\n    \"ValueCastIf\": 0.0\n}",
+        "{\n    \"AddCardRound\": 0,\n    \"AuraCurseCastIf\": \"\",\n    \"Card\": \"montviciouscrunch\",\n    \"OnlyCastIf\": \"Always\",\n    \"PercentToCast\": 0.0,\n    \"Priority\": 10,\n    \"TargetCast\": \"Random\",\n    \"UnitsInDeck\": 1,\n    \"ValueCastIf\": 0.0\n}",
+        "{\n    \"AddCardRound\": 0,\n    \"AuraCurseCastIf\": \"\",\n    \"Card\": \"monthoneclaws\",\n    \"OnlyCastIf\": \"Always\",\n    \"PercentToCast\": 0.0,\n    \"Priority\": 0,\n    \"TargetCast\": \"Random\",\n    \"UnitsInDeck\": 1,\n    \"ValueCastIf\": 0.0\n}",
+        "{\n    \"AddCardRound\": 0,\n    \"AuraCurseCastIf\": \"\",\n    \"Card\": \"montcautioushopping\",\n    \"OnlyCastIf\": \"Always\",\n    \"PercentToCast\": 0.0,\n    \"Priority\": 1,\n    \"TargetCast\": \"Random\",\n    \"UnitsInDeck\": 1,\n    \"ValueCastIf\": 0.0\n}",
+        "{\n    \"AddCardRound\": 0,\n    \"AuraCurseCastIf\": \"\",\n    \"Card\": \"montboldhopping\",\n    \"OnlyCastIf\": \"Always\",\n    \"PercentToCast\": 0.0,\n    \"Priority\": 2,\n    \"TargetCast\": \"Random\",\n    \"UnitsInDeck\": 1,\n    \"ValueCastIf\": 0.0\n}"
     ],
     "AuraCurseImmune": [],
     "BaseMonster": "",
@@ -38,7 +40,6 @@
     "ResistPiercing": 29,
     "ResistShadow": 75,
     "ResistSlashing": 18,
-
     "ScriptableObjectName": "Greater Rabbit",
     "Speed": 20,
     "Sprite": "",
