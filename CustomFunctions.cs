@@ -652,7 +652,7 @@ namespace Montimus
         /// <param name="_type">Optional: the value of if the AC is being set or consumed</param>
         /// <param name="onlyThisType">Optional: Only potentially true if _type equals this type</param>
         /// <returns>true if the team has the item/trait/perk</returns>
-        public static bool IfCharacterHas(Character characterOfInterest, CharacterHas characterHas, string id, AppliesTo appliesTo = AppliesTo.Global, string _type = "", string onlyThisType = "")
+        public static bool IfCharacterHas(Character characterOfInterest, CharacterHas characterHas, string id, AppliesTo appliesTo = AppliesTo.Global, string _type = "", string onlyThisType = "", bool isMonster = false)
         {
 
             if (appliesTo == AppliesTo.None || characterOfInterest == null || AtOManager.Instance == null)
@@ -662,6 +662,11 @@ namespace Montimus
                 return false;
 
             bool correctCharacterType = (characterOfInterest.IsHero && appliesTo == AppliesTo.Heroes) || (!characterOfInterest.IsHero && appliesTo == AppliesTo.Monsters) || (appliesTo == AppliesTo.Global) || (appliesTo == AppliesTo.ThisHero && characterOfInterest.IsHero);
+            if (isMonster)
+            {
+                bool isNPC = !characterOfInterest.IsHero;
+                correctCharacterType = (isNPC && appliesTo == AppliesTo.Heroes) || (!characterOfInterest.IsHero && appliesTo == AppliesTo.Monsters) || (appliesTo == AppliesTo.Global) || (appliesTo == AppliesTo.ThisHero && characterOfInterest.IsHero);
+            }
 
             bool hasX = false;
             if (appliesTo == AppliesTo.ThisHero)
@@ -708,6 +713,57 @@ namespace Montimus
 
             return hasX && correctCharacterType;
         }
+
+        /// <summary>
+        /// Returns true if any of the NPCs have a given enchantment.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public static bool NpcTeamHaveEnchant(string id, bool includeAB = true)
+        {
+            if (MatchManager.Instance == null)
+                return false;
+            NPC[] teamNPC = MatchManager.Instance.GetTeamNPC();
+            for (int i = 0; i < teamNPC.Length; i++)
+            {
+                if (NpcHaveEnchant(teamNPC[i], id, includeAB))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// Returns true if the NPC has an enchantment with the given id.
+        /// </summary>
+        /// <param name="npc"></param>
+        /// <param name="id"></param>
+        /// <returns></returns>
+
+        public static bool NpcHaveEnchant(Character npc, string id, bool includeAB = true)
+        {
+            if (MatchManager.Instance == null || !IsLivingNPC(npc))
+                return false;
+            bool E1 = includeAB ? (npc.Enchantment == id || npc.Enchantment == itemStem + id || npc.Enchantment == itemStem + id + "a" || npc.Enchantment == itemStem + id + "b" || npc.Enchantment == id + "a" || npc.Enchantment == id + "b") : (npc.Enchantment == id || npc.Enchantment == itemStem + id);
+            if (E1)
+            {
+                return true;
+            }
+            bool E2 = includeAB ? (npc.Enchantment2 == id || npc.Enchantment2 == itemStem + id || npc.Enchantment2 == itemStem + id + "a" || npc.Enchantment2 == itemStem + id + "b" || npc.Enchantment2 == id + "a" || npc.Enchantment2 == id + "b") : (npc.Enchantment2 == id || npc.Enchantment2 == itemStem + id);
+            if (E2)
+            {
+                return true;
+            }
+            bool E3 = includeAB ? (npc.Enchantment3 == id || npc.Enchantment3 == itemStem + id || npc.Enchantment3 == itemStem + id + "a" || npc.Enchantment3 == itemStem + id + "b" || npc.Enchantment3 == id + "a" || npc.Enchantment3 == id + "b") : (npc.Enchantment3 == id || npc.Enchantment3 == itemStem + id);
+            if (E3)
+            {
+                return true;
+            }
+            return false;
+        }
+
+
 
         /// <summary>
         /// Checks to see if your team has a perk in the global aura curse modification function.

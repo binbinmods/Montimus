@@ -91,6 +91,19 @@ namespace Montimus
             string cardId = "montproliferate";
             AddTextToCardDescription(text, TextLocation.ItemBeginning, cardId, includeAB: true);
 
+
+            text = $"{medsSpriteText("fast")} can stack on this character.";
+            cardId = "montnimblehops";
+            AddTextToCardDescription(text, TextLocation.ItemBeginning, cardId, includeAB: true);
+
+            text = $"{medsSpriteText("zeal")}{medsSpriteText("buffer")} can stack on this character.\n{medsSpriteText("sharp")} increases {medsSpriteText("mind")} by 1 per stack.";
+            cardId = "montluxuriouscoat";
+            AddTextToCardDescription(text, TextLocation.ItemBeginning, cardId, includeAB: true);
+
+            text = $"{medsSpriteText("evasion")} on monsters can stack.";
+            cardId = "montdistraction";
+            AddTextToCardDescription(text, TextLocation.ItemBeforeActivation, cardId, includeAB: true);
+
             // apply patches, this functionally runs all the code for Harmony, running your mod
             if (EnableMod.Value) { harmony.PatchAll(); }
         }

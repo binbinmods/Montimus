@@ -2,9 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <AssemblyName>com.binbin.Montimus</AssemblyName>
-    <Product>Montimus</Product>
-    <Version>0.1.1</Version>
+    <AssemblyName>com.binbin.LordMontshek</AssemblyName>
+    <Product>LordMontshek</Product>
+    <Version>0.1.0</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <LangVersion>latest</LangVersion>
     <RestoreAdditionalProjectSources>

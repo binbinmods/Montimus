@@ -63,23 +63,53 @@ namespace Montimus
             {
                 case "evasion":
                     enchantId = "montproliferate";
-                    if (IfCharacterHas(characterOfInterest, CharacterHas.Enchantment, enchantId, AppliesTo.ThisHero))
+                    if (NpcHaveEnchant(characterOfInterest, enchantId))
+                    {
+                        __result.GainCharges = true;
+                    }
+                    enchantId = "montdistraction";
+                    if (NpcTeamHaveEnchant(enchantId))
                     {
                         __result.GainCharges = true;
                     }
                     break;
                 case "fast":
                     enchantId = "montproliferate";
-                    if (IfCharacterHas(characterOfInterest, CharacterHas.Enchantment, enchantId, AppliesTo.ThisHero))
+                    if (NpcHaveEnchant(characterOfInterest, enchantId))
+                    {
+                        __result.GainCharges = true;
+                    }
+                    enchantId = "montnimblehops";
+                    if (NpcHaveEnchant(characterOfInterest, enchantId))
                     {
                         __result.GainCharges = true;
                     }
                     break;
                 case "buffer":
                     enchantId = "montproliferate";
-                    if (IfCharacterHas(characterOfInterest, CharacterHas.Enchantment, enchantId, AppliesTo.ThisHero))
+                    if (NpcHaveEnchant(characterOfInterest, enchantId))
                     {
                         __result.GainCharges = true;
+                    }
+                    enchantId = "montluxuriouscoat";
+                    if (NpcHaveEnchant(characterOfInterest, enchantId))
+                    {
+                        __result.GainCharges = true;
+                    }
+                    break;
+                case "zeal":
+                    enchantId = "montluxuriouscoat";
+                    if (NpcHaveEnchant(characterOfInterest, enchantId))
+                    {
+                        __result.GainCharges = true;
+                    }
+                    break;
+                case "sharp":
+                    enchantId = "montluxuriouscoat";
+                    if (NpcHaveEnchant(characterOfInterest, enchantId))
+                    {
+                        __result.AuraDamageType3 = Enums.DamageType.Mind;
+                        __result.AuraDamageIncreasedPerStack3 = 1;
                     }
                     break;
             }
