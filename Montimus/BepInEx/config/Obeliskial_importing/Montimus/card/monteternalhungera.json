@@ -99,7 +99,7 @@
     "Vanish": false,
     "GoldGainQuantity": 0,
     "ShardsGainQuantity": 0,
-    "HealSelfPerDamageDonePercent": 150,
+    "HealSelfPerDamageDonePercent": 500,
     "EffectRequired": "",
     "AuraChargesSpecialValue1": false,
     "AuraChargesSpecialValue2": false,

@@ -4,7 +4,7 @@
     "CombatEffect": [
         "{\n    \"AuraCurse\": \"fast\",\n    \"AuraCurseCharges\": 5,\n    \"AuraCurseTarget\": \"Monster1\"\n}"
     ],
-    "CombatID": "evoidhigh_13b",
+    "CombatID": "evoidhigh_13archonmont",
     "CombatMusic": "Lord of the Riffs",
     "CombatTier": "T13",
     "Description": "archon mont",

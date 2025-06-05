@@ -94,11 +94,11 @@ namespace Montimus
 
             text = $"{medsSpriteText("fast")} can stack on this character.";
             cardId = "montnimblehops";
-            AddTextToCardDescription(text, TextLocation.ItemBeginning, cardId, includeAB: true);
+            AddTextToCardDescription(text, TextLocation.ItemBeforeActivation, cardId, includeAB: true);
 
             text = $"{medsSpriteText("zeal")}{medsSpriteText("buffer")} can stack on this character.\n{medsSpriteText("sharp")} increases {medsSpriteText("mind")} by 1 per stack.";
             cardId = "montluxuriouscoat";
-            AddTextToCardDescription(text, TextLocation.ItemBeginning, cardId, includeAB: true);
+            AddTextToCardDescription(text, TextLocation.ItemBeforeActivation, cardId, includeAB: true);
 
             text = $"{medsSpriteText("evasion")} on monsters can stack.";
             cardId = "montdistraction";

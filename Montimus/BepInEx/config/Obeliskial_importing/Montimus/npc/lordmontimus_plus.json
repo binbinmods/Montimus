@@ -45,8 +45,8 @@
     "ExperienceReward": 200,
     "Female": false,
     "FinishCombatOnDead": true,
-    "FluffOffsetX": -0.20000000298023225,
-    "FluffOffsetY": 3.5,
+    "FluffOffsetX": -0.10000000149011612,
+    "FluffOffsetY": 3.299999952316284,
     "GameObjectAnimated": "lordmontimus",
     "GoldReward": 150,
     "HellModeMob": "lordmontimus_plush",
@@ -78,5 +78,5 @@
     "UpgradedMob": "",
     "GameObjectFlip": false,
     "GameObjectMakeBig": false,
-    "GameObjectReplaceTexture": ""
+    "GameObjectReplaceTexture": "montimus"
 }

@@ -82,7 +82,7 @@
     "IncreaseCurses": 0,
     "ReduceAuras": 0,
     "ReduceCurses": 0,
-    "Innate": true,
+    "Innate": false,
     "LookCards": 0,
     "LookCardsDiscardUpTo": 0,
     "LookCardsVanishUpTo": 0,

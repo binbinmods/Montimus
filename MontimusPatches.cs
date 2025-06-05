@@ -29,21 +29,62 @@ namespace Montimus
     {
 
         [HarmonyPrefix]
-        [HarmonyPatch(typeof(MapManager), "SetPositionInCurrentNode")]
-        public static void SetPositionInCurrentNodePrefix(MapManager __instance)
+        [HarmonyPatch(typeof(MapManager), "DoCombat")]
+        public static void DoCombatPrefix(MapManager __instance, ref CombatData _combatData)
         {
+
+            LogDebug($"DoCombatPrefix: {string.Join(", ", AtOManager.Instance.bossesKilledName ?? new List<string>())}");
+            bool killedLordMont = AtOManager.Instance.bossesKilledName != null && AtOManager.Instance.bossesKilledName.Any<string>((Func<string, bool>)(s => s.StartsWith("lordmontimus", StringComparison.OrdinalIgnoreCase)));
+            if (_combatData.CombatId == "evoidhigh_13b" && killedLordMont)
+            {
+                LogDebug("DoCombatPrefix - Getting Combat Data for Archon Mont");
+                try
+                {
+                    _combatData = Globals.Instance.GetCombatData("evoidhigh_13archonmont");
+                }
+                catch (Exception e)
+                {
+                    LogError($"DoCombatPrefix - Error getting combat data: {e.Message}");
+                    return; // Prevent further execution if combat data cannot be retrieved
+                }
+            }
+            // else if (AtOManager.Instance.bossesKilledName != null && AtOManager.Instance.bossesKilledName.Any<string>((Func<string, bool>)(s => s.StartsWith("lordmontimus", StringComparison.OrdinalIgnoreCase))))
+            // {
+            //     LogDebug("DoCombatPrefix - Killed Lord Montshek");
+            //     if (!AtOManager.Instance.bossesKilledName.Any<string>((Func<string, bool>)(s => s.StartsWith("archonmont", StringComparison.OrdinalIgnoreCase))))
+            //     {
+            //         LogDebug("DoCombatPrefix - Archon Mont Combat starting");
+            //         AtOManager.Instance.SetCombatData(Globals.Instance.GetCombatData("evoidhigh_13archonmont"));
+            //         DoCombat(__instance, AtOManager.Instance.GetCurrentCombatData());
+            //         return false;
+            //     }
+            //     AtOManager.Instance.FinishGame();
+            //     return false;
+            // }
+            // return true;
+        }
+
+        [HarmonyPrefix]
+        [HarmonyPatch(typeof(MapManager), "SetPositionInCurrentNode")]
+        public static bool SetPositionInCurrentNodePrefix(MapManager __instance)
+        {
+
             string str = AtOManager.Instance.currentMapNode;  //CurrentNode(__instance);
+            LogDebug($"SetPositionInCurrentNodePrefix + {str}: {string.Join(", ", AtOManager.Instance.bossesKilledName ?? new List<string>())}");
             if (str == "voidhigh_13" && AtOManager.Instance.bossesKilledName != null && AtOManager.Instance.bossesKilledName.Any<string>((Func<string, bool>)(s => s.StartsWith("lordmontimus", StringComparison.OrdinalIgnoreCase))))
             {
+                LogDebug("SetPositionInCurrentNodePrefix - Killed Lord Montshek");
                 if (!AtOManager.Instance.bossesKilledName.Any<string>((Func<string, bool>)(s => s.StartsWith("archonmont", StringComparison.OrdinalIgnoreCase))))
                 {
+                    LogDebug("SetPositionInCurrentNodePrefix - Archon Mont Combat starting");
                     AtOManager.Instance.SetCombatData(Globals.Instance.GetCombatData("evoidhigh_13archonmont"));
                     DoCombat(__instance, AtOManager.Instance.GetCurrentCombatData());
-                    return;
+                    return false;
                 }
                 AtOManager.Instance.FinishGame();
-                return;
+                return false;
             }
+            return true;
         }
 
         [HarmonyPostfix]

@@ -1,8 +1,12 @@
-# Lord Montimus
+# Lord Montshek
 
-This mod adds Lord Montimus and Archon Mont as replacements for Lord Hanshek and Archon Nihr.
+This mod adds Lord Montshek and Archon Mont as replacements for Lord Hanshek and Archon Nihr.
 
-If you have any suggestions for things you would like to see, let me know! Balanching Suggestions are also extremely welcome!
+These enemies are intended to be _slightly_ harder than Lord Hanshek and Archon Nihr, but are likely currently unbalanced, as such any Balancing Suggestions are extremely welcome!
+
+In order to fight either Montshek and Mont, all you have to do is make it to the end of act 4 and choose the "What is that?!" option.
+
+If you have any suggestions for things you would like to see, let me know! Likewise, if you come across any issues, pleae ping me on the [Across the Obelisk Modding Discord](https://discord.gg/across-the-obelisk-679706811108163701). :)
 
 This has not been tested in multiplayer yet, so let me know if there are any issues! Note: there are likely to be a good number of them.
 

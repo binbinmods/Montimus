@@ -2,7 +2,7 @@
   "name": "Lord_Montshek",
   "version_number": "0.1.0",
   "website_url": "https://github.com/binbinmods/Montimus",
-  "description": "Adds a new, Monty-Inspired, final boss. May be slightly harder than the original.",
+  "description": "Adds a new, Monty-Inspired, set of final bosses. Intended to be slightly harder than the originals.",
   "dependencies": [
     "meds-Obeliskial_Content-1.5.5",
     "meds-Obeliskial_Essentials-1.4.8"
