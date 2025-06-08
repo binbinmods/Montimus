@@ -97,6 +97,40 @@ namespace Montimus
         }
 
         [HarmonyPostfix]
+        [HarmonyPatch(typeof(Character), "DoItem")]
+
+        public static void DoItemPostfix(
+            ref Character __instance,
+            Enums.EventActivation theEvent,
+            CardData cardData,
+            string item,
+            Character target,
+            int auxInt,
+            string auxString,
+            int order,
+            CardData _castedCard)
+        {
+            if (item.StartsWith("montproliferate"))
+            {
+                LogDebug("Removing Proliferate");
+                if (__instance.Enchantment.StartsWith("montproliferate"))
+                {
+                    __instance.Enchantment = "";
+                }
+                if (__instance.Enchantment2.StartsWith("montproliferate"))
+                {
+                    __instance.Enchantment2 = "";
+                }
+                if (__instance.Enchantment3.StartsWith("montproliferate"))
+                {
+                    __instance.Enchantment3 = "";
+                }
+
+                __instance.ReorganizeEnchantments();
+            }
+        }
+
+        [HarmonyPostfix]
         [HarmonyPatch(typeof(AtOManager), "GlobalAuraCurseModificationByTraitsAndItems")]
         public static void GlobalAuraCurseModificationByTraitsAndItemsPostfix(ref AtOManager __instance, ref AuraCurseData __result, string _type, string _acId, Character _characterCaster, Character _characterTarget)
         {

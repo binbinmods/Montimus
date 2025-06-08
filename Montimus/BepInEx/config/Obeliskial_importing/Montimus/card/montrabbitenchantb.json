@@ -178,7 +178,7 @@
     "MoveToCenter": false,
     "PetFront": false,
     "PetInvert": true,
-    "PetModel": "blob_lava",
+    "PetModel": "conejo",
     "PetOffset": "(0.75, 0.12)",
     "PetSize": "(1.10, 1.10)",
     "Playable": true,
