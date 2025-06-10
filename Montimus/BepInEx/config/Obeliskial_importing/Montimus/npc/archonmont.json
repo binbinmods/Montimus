@@ -129,7 +129,7 @@
     "FluffOffsetY": 3.299999952316284,
     "GameObjectAnimated": "archonmont",
     "GoldReward": 100,
-    "HellModeMob": "",
+    "HellModeMob": "archonmont_plush",
     "HitSound": "",
     "HP": 5555,
     "ID": "archonmont",

@@ -63,15 +63,6 @@ namespace Montimus
             // }
             // return true;
         }
-        [HarmonyPostfix]
-        [HarmonyPatch(typeof(MatchManager), "GenerateNPCs")]
-        public static void GenerateNPCsPostfix()
-        {
-            string[] teamNPC = AtOManager.Instance.GetTeamNPC();
-            LogDebug($"GenerateNPCsPostfix - TeamNPCs: {string.Join(", ", teamNPC)}");
-            NPCData npc1 = Globals.Instance.GetNPC(teamNPC[0]);
-            LogDebug($"GenerateNPCsPostfix - Upgraded NPC1: {npc1.NgPlusMob?.Id ?? "null NgPlusMob"}");
-        }
 
         [HarmonyPrefix]
         [HarmonyPatch(typeof(MapManager), "SetPositionInCurrentNode")]
@@ -129,6 +120,7 @@ namespace Montimus
                 __instance.ReorganizeEnchantments();
             }
         }
+
 
         [HarmonyPostfix]
         [HarmonyPatch(typeof(AtOManager), "GlobalAuraCurseModificationByTraitsAndItems")]

@@ -21,7 +21,7 @@
     "FluffOffsetY": 3.299999952316284,
     "GameObjectAnimated": "conejo",
     "GoldReward": 50,
-    "HellModeMob": "",
+    "HellModeMob": "greaterrabbit_plush",
     "HitSound": "",
     "HP": 444,
     "ID": "greaterrabbit_plus",

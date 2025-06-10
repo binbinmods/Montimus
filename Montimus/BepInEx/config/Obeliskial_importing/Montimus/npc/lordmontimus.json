@@ -49,7 +49,7 @@
     "FluffOffsetY": 3.299999952316284,
     "GameObjectAnimated": "lordmontimus",
     "GoldReward": 150,
-    "HellModeMob": "",
+    "HellModeMob": "lordmontimus_plush",
     "HitSound": "",
     "HP": 1983,
     "ID": "lordmontimus",
