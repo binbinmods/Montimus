@@ -4,6 +4,10 @@
 
 Should work with Obeliskial Content v1.5.6+ and should also work with prior versions. -->
 
+# 0.1.3
+
+Fixed an issue with Proliferate being able to be acquired by heroes.
+
 # 0.1.2
 
 Bug fix to prevent game from crashing when entering boss fight

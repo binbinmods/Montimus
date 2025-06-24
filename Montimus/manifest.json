@@ -1,6 +1,6 @@
 {
   "name": "Lord_Montshek",
-  "version_number": "0.1.2",
+  "version_number": "0.1.3",
   "website_url": "https://github.com/binbinmods/Montimus",
   "description": "Adds a new, Monty-Inspired, set of final bosses. Intended to be slightly harder than the originals.",
   "dependencies": [

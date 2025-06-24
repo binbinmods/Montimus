@@ -16,7 +16,7 @@
     "UpgradesTo1": "montproliferatea",
     "UpgradesTo2": "montproliferateb",
     "UpgradesToRare": "",
-    "CardClass": "Warrior",
+    "CardClass": "Monster",
     "CardType": "Enchantment",
     "CardTypeAux": [],
     "CardName": "Proliferate",
